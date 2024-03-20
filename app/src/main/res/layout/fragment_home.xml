@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GUI.HomeFragment">
+
+    <HorizontalScrollView
+        android:id="@+id/horizontalScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:layout_alignParentStart="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:orientation="horizontal"
+            android:scrollbarThumbHorizontal="@null"
+            tools:ignore="ExtraText">
+
+
+            <LinearLayout style="@style/scrollMenu">
+
+                <ImageButton
+                    android:id="@+id/Furniture"
+                    style="@style/homeSlideMenu"
+                    android:contentDescription="@string/furniture"
+                    android:src="@drawable/furniture_house_living_12_svgrepo_com" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/furniture"
+                    android:textAlignment="center"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/scrollMenu">
+
+                <ImageButton
+                    android:id="@+id/Electronic"
+                    style="@style/homeSlideMenu"
+
+                    android:contentDescription="@string/electronic"
+                    android:src="@drawable/phone_svgrepo_com"  />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/electronic" />
+            </LinearLayout>
+
+        <LinearLayout
+            style="@style/scrollMenu">
+            <ImageButton
+                android:id="@+id/stationary"
+                style="@style/homeSlideMenu"
+                android:contentDescription="@string/stationary"
+                android:src="@drawable/stationary_svgrepo_com" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/stationary" />
+        </LinearLayout>
+
+            <LinearLayout
+                style="@style/scrollMenu">
+                <ImageButton
+                    android:id="@+id/Clothes"
+                    style="@style/homeSlideMenu"
+                    android:contentDescription="@string/clothes"
+                    android:src="@drawable/clothes_svgrepo_com" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/clothes" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/scrollMenu">
+                <ImageButton
+                    android:id="@+id/Sports"
+                    style="@style/homeSlideMenu"
+                    android:contentDescription="@string/sports"
+                    android:src="@drawable/sports_svgrepo_com" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sports" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/scrollMenu">
+                <ImageButton
+                    android:id="@+id/Cars"
+                    style="@style/homeSlideMenu"
+                    android:contentDescription="@string/cars"
+                    android:src="@drawable/car_svgrepo_com" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cars" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvMainProductsList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/horizontalScrollView"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:padding="10dp"
+        tools:listitem="@layout/product_card_view" />
+
+
+</RelativeLayout>
